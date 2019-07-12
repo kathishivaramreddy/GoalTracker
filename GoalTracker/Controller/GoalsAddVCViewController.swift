@@ -12,12 +12,13 @@ class GoalsAddVCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nextButton.bindToKeyBoard()
     }
     
     
     @IBOutlet weak var goalTextView: UITextView!
     
+    @IBOutlet weak var nextButton: UIButton!
     
     /*
     // MARK: - Navigation

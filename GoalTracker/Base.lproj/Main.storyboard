@@ -185,11 +185,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gix-9d-pUg">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gix-9d-pUg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KQv-3Q-MRD">
-                                        <rect key="frame" x="154.66666666666666" y="25" width="104.66666666666666" height="23.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KQv-3Q-MRD">
+                                        <rect key="frame" x="154.66666666666669" y="25" width="104.66666666666667" height="23.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrd-Sd-Bid">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="23.333333333333332"/>
@@ -281,12 +281,10 @@
                         <constraints>
                             <constraint firstItem="EQI-s2-qAB" firstAttribute="trailing" secondItem="y85-we-AMc" secondAttribute="trailing" id="5Ed-Lw-NZa"/>
                             <constraint firstAttribute="bottom" secondItem="HZ5-KQ-8U6" secondAttribute="bottom" constant="330" id="6Nl-pu-5lJ"/>
-                            <constraint firstItem="gix-9d-pUg" firstAttribute="trailing" secondItem="EQI-s2-qAB" secondAttribute="trailing" id="7KV-Eb-g6t"/>
-                            <constraint firstItem="gix-9d-pUg" firstAttribute="leading" secondItem="EQI-s2-qAB" secondAttribute="leading" id="Kuj-nt-IXp"/>
                             <constraint firstItem="gix-9d-pUg" firstAttribute="top" secondItem="y85-we-AMc" secondAttribute="top" constant="-20" id="LpU-e4-S58"/>
                             <constraint firstItem="EQI-s2-qAB" firstAttribute="leading" secondItem="y85-we-AMc" secondAttribute="leading" id="MoI-en-Acg"/>
                             <constraint firstItem="y85-we-AMc" firstAttribute="trailing" secondItem="HZ5-KQ-8U6" secondAttribute="trailing" constant="13" id="SBv-Gx-kYd"/>
-                            <constraint firstItem="EQI-s2-qAB" firstAttribute="bottom" secondItem="y85-we-AMc" secondAttribute="bottom" id="UBa-AC-rJA"/>
+                            <constraint firstItem="EQI-s2-qAB" firstAttribute="bottom" secondItem="t5B-Dn-Keu" secondAttribute="bottom" id="UBa-AC-rJA"/>
                             <constraint firstItem="HZ5-KQ-8U6" firstAttribute="leading" secondItem="t5B-Dn-Keu" secondAttribute="leadingMargin" id="VGW-Bh-gtn"/>
                             <constraint firstItem="HZ5-KQ-8U6" firstAttribute="top" secondItem="gix-9d-pUg" secondAttribute="bottom" constant="8" symbolic="YES" id="snz-sH-45X"/>
                         </constraints>
@@ -294,6 +292,7 @@
                     </view>
                     <connections>
                         <outlet property="goalTextView" destination="2dx-fI-na0" id="6oW-xn-qtA"/>
+                        <outlet property="nextButton" destination="EQI-s2-qAB" id="zXb-hJ-Hg8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="luW-Nu-jSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
