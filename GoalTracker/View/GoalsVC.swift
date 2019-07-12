@@ -89,14 +89,40 @@ extension GoalsVC : UITableViewDelegate , UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
         deleteAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        return [deleteAction]
+        
+        
+        let addAction = UITableViewRowAction(style: .normal, title: "Progress ↑") { (tableRowAction, indexPath) in
+            self.setGoalProgress(at: indexPath)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+        addAction.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        return [deleteAction,addAction]
     }
-    
-    
-    
+
 }
 
 extension GoalsVC {
+    
+    func setGoalProgress(at indexPath: IndexPath) {
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let goalToBeUpdated = goals[indexPath.row]
+        
+        if goalToBeUpdated.goalProgress < goalToBeUpdated.goalCompletion {
+            goalToBeUpdated.goalProgress += 1
+        }
+        do {
+              try managedContext.save()
+            
+           
+        } catch  {
+            debugPrint("\(error.localizedDescription)")
+            
+        }
+        
+    }
     
     func fetchFromCoreData(completion: (_ complete: Bool) -> ()) {
        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
@@ -105,6 +131,7 @@ extension GoalsVC {
         
         do {
              goals = try managedContext.fetch(fetchRequest)
+            
             completion(true)
         } catch  {
             debugPrint("\(error.localizedDescription)")
