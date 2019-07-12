@@ -39,6 +39,7 @@ class CreateGoalVC: UIViewController, UITextFieldDelegate {
             save { (complete) in
                 if complete {
                     dismiss(animated: true, completion: nil)
+                    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
                 }
             }
         }
