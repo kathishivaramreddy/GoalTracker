@@ -393,6 +393,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
                                         <state key="normal" title="Create Goal"/>
+                                        <connections>
+                                            <action selector="createGoalButtonPressed:" destination="z9C-d7-FHO" eventType="touchUpInside" id="UP2-mj-WSq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -419,7 +422,7 @@
                         <viewLayoutGuide key="safeArea" id="AjQ-xA-jlc"/>
                     </view>
                     <connections>
-                        <outlet property="createGoalButton" destination="K8B-ic-Jfv" id="5RS-H6-qKj"/>
+                        <outlet property="createGoalButton" destination="K8B-ic-Jfv" id="XwV-WP-dz4"/>
                         <outlet property="goalPointTextField" destination="3ON-Pa-ZT3" id="Pc8-xg-ZXP"/>
                     </connections>
                 </viewController>
